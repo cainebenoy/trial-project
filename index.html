@@ -13,6 +13,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
+    <!-- External CSS -->
+    <link rel="stylesheet" href="styles.css">
+
     <style>
         /* Use Inter as the default font */
         body {
@@ -33,20 +36,27 @@
             <div class="text-2xl font-bold text-gray-900">
                 <a href="#">MySite</a>
             </div>
-            <!-- Navigation Links -->
+            <!-- Desktop Navigation Links -->
             <div class="hidden md:flex space-x-6">
                 <a href="#home" class="text-gray-600 hover:text-indigo-600 transition duration-300">Home</a>
                 <a href="#about" class="text-gray-600 hover:text-indigo-600 transition duration-300">About</a>
                 <a href="#services" class="text-gray-600 hover:text-indigo-600 transition duration-300">Services</a>
                 <a href="#contact" class="text-gray-600 hover:text-indigo-600 transition duration-300">Contact</a>
             </div>
-            <!-- Mobile Menu Button (optional) -->
+            <!-- Mobile Menu Button -->
             <div class="md:hidden">
-                <button class="text-gray-600 hover:text-indigo-600 focus:outline-none">
+                <button id="mobile-menu-button" class="text-gray-600 hover:text-indigo-600 focus:outline-none">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
                 </button>
             </div>
         </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden hidden">
+            <a href="#home" class="block py-2 px-4 text-sm text-gray-600 hover:bg-gray-100">Home</a>
+            <a href="#about" class="block py-2 px-4 text-sm text-gray-600 hover:bg-gray-100">About</a>
+            <a href="#services" class="block py-2 px-4 text-sm text-gray-600 hover:bg-gray-100">Services</a>
+            <a href="#contact" class="block py-2 px-4 text-sm text-gray-600 hover:bg-gray-100">Contact</a>
+        </div>
     </header>
 
     <!-- Main Content -->
@@ -70,7 +80,7 @@
         </section>
 
         <!-- About Section -->
-        <section id="about" class="py-20 bg-gray-50">
+        <section id="about" class="py-20 bg-gray-50 fade-in-section">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-12">
                     <h2 class="text-3xl md:text-4xl font-bold text-gray-900">About Us</h2>
@@ -96,7 +106,7 @@
         </section>
 
         <!-- Services Section -->
-        <section id="services" class="py-20 bg-white">
+        <section id="services" class="py-20 bg-white fade-in-section">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-12">
                     <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Our Services</h2>
@@ -134,7 +144,7 @@
     </main>
 
     <!-- Footer -->
-    <footer id="contact" class="bg-gray-800 text-white">
+    <footer id="contact" class="bg-gray-800 text-white fade-in-section">
         <div class="container mx-auto px-6 py-12">
             <div class="flex flex-col md:flex-row justify-between items-center">
                 <div class="text-center md:text-left mb-6 md:mb-0">
@@ -160,5 +170,12 @@
         </div>
     </footer>
 
+    <!-- Back to Top Button -->
+    <button id="back-to-top-btn" class="hidden fixed bottom-5 right-5 bg-indigo-600 text-white p-3 rounded-full shadow-lg hover:bg-indigo-700 transition duration-300">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path></svg>
+    </button>
+
+    <!-- External JavaScript -->
+    <script src="script.js"></script>
 </body>
 </html>
